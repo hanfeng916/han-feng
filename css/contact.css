@@ -1,0 +1,154 @@
+.li1-box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.li1-box-item{
+  position: relative;
+  flex: 0 0 45%;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+
+.li1-box-item>img{
+  width: 100%;
+  height: 100%;
+}
+.li2-box{
+  padding: 50px;
+}
+
+.li2-box>input,.li2-box>textarea{
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #F4F5F7;
+  border-radius: 10px;
+  padding: 0 20px;
+  box-shadow: inset 0 0 4px -1px rgb(0 0 0 / 15%);
+  box-sizing: border-box;
+  /* color: var(--headerFont); */
+}
+.li2-box>textarea{
+  height: 200px;
+  resize: none;
+}
+.li2-box>button{
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--mainColor);
+  color: var(--headerFont);
+}
+
+.content-li svg path{
+  fill: var(--headerFont);
+}
+
+
+ /* 手机*/
+ @media screen and (max-width: 550px) {
+  .content-li{
+    display: block;
+  }
+  .li1-box{
+    display: block !important;
+  }
+  .li2-box{
+    padding: 10px;
+  }
+}
+/* 触发弹窗图片的样式 */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+ 
+#myImg:hover {opacity: 0.7;}
+ 
+/* 弹窗背景 */
+.modal {
+	text-align: center;
+	margin: 5%;
+   /* display: none; */
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 30px;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 80%;
+/*    overflow: auto; */
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+ 
+/* 图片 */
+.modal-content {
+    margin: auto;
+    display: block;
+	max-height: 43.75rem;
+    width: 80%;
+    max-width: 43.75rem;
+}
+ 
+/* 文本内容 */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+ 
+/* 添加动画 */
+.modal-content, #caption { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+ 
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+ 
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+ 
+/* 关闭按钮 */
+.close1 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+ 
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+ 
+/* 小屏幕中图片宽度为 80% */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 80%;
+		height: 80%;
+    }
+}
